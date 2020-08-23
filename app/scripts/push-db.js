@@ -1,11 +1,12 @@
 /* eslint-disable no-console */
+// To use script run 'node push-db.js'. Before that, place your files in push-data directory.
 const mongoose = require('mongoose');
 const fs = require('fs');
 const logisticModel = require('../models/Logistic');
+const dbURL = require('../dbAccess');
 
 const db = mongoose.connection;
 
-const dbURL = 'mongodb+srv://gachaAPI:jXpOpNgWFjmRac8O@gachadatacluster.pm0gk.mongodb.net/gflData';
 const newLogistics = [];
 
 mongoose.connect(dbURL, {
